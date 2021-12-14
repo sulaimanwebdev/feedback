@@ -134,7 +134,7 @@
             </div>
             <div class="inputCont w-full">
               <form class="w-full acutualFormSubmit">
-                <textarea required placeholder="Enter your feedback" class="w-full inputForm  bg-gray-300 rounded px-3 pt-3 pb-3"></textarea>
+                <textarea  placeholder="Enter your feedback" class="w-full inputForm  bg-gray-300 rounded px-3 pt-3 pb-3"></textarea>
                 <button type="submit" class="w-full py-4 font-bold text-white flex items-center justify-center bg-[#2973d4] rounded submit">Send</button>
                 <a href="#" class="w-full py-4 font-bold text-white flex items-center justify-center bg-[#2973d4] rounded googlePlay hidden">Go to Google Play</a>
 
@@ -262,7 +262,8 @@ ourTextPara.classList.add('paraShow')
 
         ourText.innerHTML = 'You gave us 4 star 😀';
 
-ourTextPara.classList.add('paraShow')
+ourTextPara.classList.add('paraShow');
+
 
 
 
@@ -318,16 +319,13 @@ submitBTN.style.display = 'none';
     acutualFormSubmit.addEventListener('submit', (e) =>{
         e.preventDefault();
         starsCont.classList.add('removeStarsCont');
-        ourText.innerHTML = 'Thank You So Much For Us Feed back';
+        ourText.innerHTML = 'Thank You So Much For Your Feed Back';
 
 
         mainImage.classList.remove('removeImage');
         inputForm.classList.add('removeInput');
         mainLastText.classList.add('textGoesDown');
-
-        submitBTN.style.display = 'none';
-        googlePlay.style.display = 'flex';
-
+inputCont.classList.add('hidden');
 
 
     })
