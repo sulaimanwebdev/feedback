@@ -86,9 +86,9 @@
             display: none !important;
         }
       
-.inputForm{
-    transition: 0.3s;
-}
+        .inputForm{
+             transition: 0.3s;
+        }
         .removeInput{
             transform: translateY(-50px);
           visibility: hidden;
@@ -110,6 +110,7 @@
         .googlePlayup{
             transform: translateY(-70px);
         }
+
     </style>
 </head>
 <body>
@@ -216,7 +217,7 @@
 
         ourText.innerHTML = 'You gave us 2 star 😥';
 
-ourTextPara.classList.add('paraShow')
+        ourTextPara.classList.add('paraShow')
 
         
 
@@ -239,7 +240,7 @@ ourTextPara.classList.add('paraShow')
 
         ourText.innerHTML = 'You gave us 3 star 😥';
 
-ourTextPara.classList.add('paraShow')
+        ourTextPara.classList.add('paraShow')
 
 
     });
@@ -262,7 +263,7 @@ ourTextPara.classList.add('paraShow')
 
         ourText.innerHTML = 'You gave us 4 star 😀';
 
-ourTextPara.classList.add('paraShow');
+       ourTextPara.classList.add('paraShow');
 
 
 
@@ -295,8 +296,8 @@ else{
 
         ourText.innerHTML = 'You gave us 5 star 🙏';
 
-ourTextPara.classList.add('paraShow')
-submitBTN.style.display = 'none';
+        ourTextPara.classList.add('paraShow')
+        submitBTN.style.display = 'none';
         googlePlay.style.display = 'flex';
         starsCont.classList.add('removeStarsCont');
         inputForm.classList.add('removeInput');
@@ -325,8 +326,9 @@ submitBTN.style.display = 'none';
         mainImage.classList.remove('removeImage');
         inputForm.classList.add('removeInput');
         mainLastText.classList.add('textGoesDown');
-inputCont.classList.add('hidden');
-
+        inputCont.classList.add('hidden');
+        mainDiv.style.marginBottom = '100px';
+        mainImage.style.marginBottom = '30px';
 
     })
 
