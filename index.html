@@ -100,6 +100,14 @@
         .textGoesDown{
             transform: translateY(80px);
         }
+
+        .googlePlay{
+            transition: 0.3s;
+        }
+
+        .googlePlayup{
+            transform: translateY(-70px);
+        }
     </style>
 </head>
 <body>
@@ -164,6 +172,8 @@
     let mainLastText = document.querySelector('.mainLastText');
 
 
+    let submitBTN = document.querySelector('.submit');
+    let googlePlay =  document.querySelector('.googlePlay');
 
     firstStar.addEventListener('click', () =>{
         firstStar.classList.add('bold');
@@ -178,9 +188,12 @@
         
         inputCont.classList.add('showInputCont');
         
-        ourText.innerHTML = 'You gave us 1 star';
+        ourText.innerHTML = 'You gave us 1 star 😥';
 
-        ourTextPara.classList.add('paraShow')
+        ourTextPara.classList.add('paraShow');
+
+
+
     });
 
 
@@ -199,7 +212,7 @@
         inputCont.classList.add('showInputCont');
 
 
-        ourText.innerHTML = 'You gave us 2 star';
+        ourText.innerHTML = 'You gave us 2 star 😥';
 
 ourTextPara.classList.add('paraShow')
 
@@ -222,7 +235,7 @@ ourTextPara.classList.add('paraShow')
 
         inputCont.classList.add('showInputCont');
 
-        ourText.innerHTML = 'You gave us 3 star';
+        ourText.innerHTML = 'You gave us 3 star 😥';
 
 ourTextPara.classList.add('paraShow')
 
@@ -245,7 +258,7 @@ ourTextPara.classList.add('paraShow')
 
         inputCont.classList.add('showInputCont');
 
-        ourText.innerHTML = 'You gave us 4 star';
+        ourText.innerHTML = 'You gave us 4 star 😀';
 
 ourTextPara.classList.add('paraShow')
 
@@ -255,23 +268,48 @@ ourTextPara.classList.add('paraShow')
 
 
 
+
+
     fivthStar.addEventListener('click', () =>{
+
+if( ourText.innerHTML == 'You gave us 1 star 😥'){
+    mainDiv.classList.remove('mainDivGoesUp');  
+}
+else{
+    mainDiv.classList.remove('mainDivGoesUp');  
+
+}
+
         firstStar.classList.add('bold');
         secStar.classList.add('bold');
         thirdStar.classList.add('bold');
         fourthStar.classList.add('bold');
         fivthStar.classList.add('bold');
 
-        mainImage.classList.add('removeImage');
-        mainDiv.classList.add('mainDivGoesUp');
-
+        mainImage.classList.remove('removeImage');
         inputCont.classList.add('showInputCont');
 
-        ourText.innerHTML = 'You gave us 5 star';
+
+        ourText.innerHTML = 'You gave us 5 star 🙏';
 
 ourTextPara.classList.add('paraShow')
+submitBTN.style.display = 'none';
+        googlePlay.style.display = 'flex';
+        starsCont.classList.add('removeStarsCont');
+        inputForm.classList.add('removeInput');
+
+        googlePlay.classList.add('googlePlayup');
+
+
 
     });
+
+
+
+
+
+
+
 
 
 
@@ -285,13 +323,12 @@ ourTextPara.classList.add('paraShow')
         inputForm.classList.add('removeInput');
         mainLastText.classList.add('textGoesDown');
 
-        document.querySelector('.submit').style.display = 'none';
-        document.querySelector('.googlePlay').style.display = 'flex';
+        submitBTN.style.display = 'none';
+        googlePlay.style.display = 'flex';
 
 
 
     })
-
 
 
 
