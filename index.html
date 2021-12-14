@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.11.1/css/all.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Feedback</title>
+    <style>
+        body{
+            overflow: hidden;
+        }
+        .mainStar{
+            color: #2973d4;
+        }
+
+        .bold{
+            font-weight: bold;
+        }
+        .mainImage{
+            transition: 0.3s;
+        }
+
+
+        .mainDiv{
+            transition: 0.3s;
+            
+        }
+
+
+        .removeImage{
+            opacity: 0;
+            transform: translateY(-100px);
+            
+        }
+
+        .mainDivGoesUp{
+            transform: translateY(-100px);
+
+        }
+
+        .inputForm{
+            outline: none;
+            border: none;
+            resize: none;
+        }
+
+
+        .inputCont{
+            opacity: 0;
+            transform: translateY(100px);
+            transition: 0.3s;
+
+        
+        }
+
+
+        .showInputCont{
+            transform: translateY(0);
+            opacity: 1;
+            margin-top: 20px;
+        }
+
+        .showInputCont input{
+            margin-bottom: 10px;
+        }
+
+        .ourTextPara{
+            display: none !important;
+        }
+
+        .paraShow{
+            display: block !important;
+            margin-top: 10px;
+        }
+
+
+        .starsCont{
+            transition: 0.3s;
+        }
+        .removeStarsCont{
+            opacity: 0;
+            display: none !important;
+        }
+      
+.inputForm{
+    transition: 0.3s;
+}
+        .removeInput{
+            transform: translateY(-50px);
+          visibility: hidden;
+          opacity: 0;
+        }
+
+        .mainLastText{
+            transition: 0.3s;
+        }
+
+        .textGoesDown{
+            transform: translateY(80px);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="w-full h-screen flex items-center justify-center">
+
+        <div class="max-w-[400px] w-full">
+
+
+            <img src="mainImage.jpg" alt="" class="w-[400px] mainImage">
+          <div class="-mt-14 mainDiv w-full">
+            <div class="mainLastText">
+                <div class="flex items-center justify-center  font-bold text-xl text-[#2973d4] ourText">Please give Feedback</div>
+            <div class="ourTextPara text-center opacity-70">This is sample text for paragraph ofcourse you can edit this.</div>
+            </div>
+            <div class="flex items-center justify-center gap-2 mt-5 starsCont">
+             <i class="fal fa-star mainStar firstStar text-3xl cursor-pointer"></i>
+             <i class="fal fa-star mainStar secStar text-3xl cursor-pointer"></i>
+             <i class="fal fa-star mainStar thirdStar text-3xl cursor-pointer"></i>
+             <i class="fal fa-star mainStar fourthStar text-3xl cursor-pointer"></i>
+             <i class="fal fa-star mainStar fivthStar text-3xl cursor-pointer"></i>
+            </div>
+            <div class="inputCont w-full">
+              <form class="w-full acutualFormSubmit">
+                <textarea required placeholder="Enter your feedback" class="w-full inputForm  bg-gray-300 rounded px-3 pt-3 pb-3"></textarea>
+                <button type="submit" class="w-full py-4 font-bold text-white flex items-center justify-center bg-[#2973d4] rounded submit">Send</button>
+                <a href="#" class="w-full py-4 font-bold text-white flex items-center justify-center bg-[#2973d4] rounded googlePlay hidden">Go to Google Play</a>
+
+                
+              </form>
+            </div>
+          </div>
+
+
+
+
+
+
+
+
+        </div>
+
+    </div>
+    
+</body>
+</html>
+
+<script>
+    let firstStar = document.querySelector('.firstStar');
+    let secStar = document.querySelector('.secStar');
+    let thirdStar = document.querySelector('.thirdStar');
+    let fourthStar = document.querySelector('.fourthStar');
+    let fivthStar = document.querySelector('.fivthStar');
+    let mainImage = document.querySelector('.mainImage');
+    let mainDiv = document.querySelector('.mainDiv');
+    let inputCont = document.querySelector('.inputCont');
+    let ourText = document.querySelector('.ourText');
+    let ourTextPara = document.querySelector('.ourTextPara');
+    let starsCont = document.querySelector('.starsCont');
+    let acutualFormSubmit = document.querySelector('.acutualFormSubmit');
+    let inputForm = document.querySelector('.inputForm');
+    let mainLastText = document.querySelector('.mainLastText');
+
+
+
+    firstStar.addEventListener('click', () =>{
+        firstStar.classList.add('bold');
+
+        secStar.classList.remove('bold');
+        thirdStar.classList.remove('bold');
+        fourthStar.classList.remove('bold');
+        fivthStar.classList.remove('bold');
+
+        mainImage.classList.add('removeImage');
+        mainDiv.classList.add('mainDivGoesUp');
+        
+        inputCont.classList.add('showInputCont');
+        
+        ourText.innerHTML = 'You gave us 1 star';
+
+        ourTextPara.classList.add('paraShow')
+    });
+
+
+
+    secStar.addEventListener('click', () =>{
+        firstStar.classList.add('bold');
+        secStar.classList.add('bold');
+
+        thirdStar.classList.remove('bold');
+        fourthStar.classList.remove('bold');
+        fivthStar.classList.remove('bold');
+
+        mainImage.classList.add('removeImage');
+        mainDiv.classList.add('mainDivGoesUp');
+
+        inputCont.classList.add('showInputCont');
+
+
+        ourText.innerHTML = 'You gave us 2 star';
+
+ourTextPara.classList.add('paraShow')
+
+        
+
+    });
+
+
+
+    thirdStar.addEventListener('click', () =>{
+        firstStar.classList.add('bold');
+        secStar.classList.add('bold');
+        thirdStar.classList.add('bold');
+
+        fourthStar.classList.remove('bold');
+        fivthStar.classList.remove('bold');
+
+        mainImage.classList.add('removeImage');
+        mainDiv.classList.add('mainDivGoesUp');
+
+        inputCont.classList.add('showInputCont');
+
+        ourText.innerHTML = 'You gave us 3 star';
+
+ourTextPara.classList.add('paraShow')
+
+
+    });
+
+
+
+
+    fourthStar.addEventListener('click', () =>{
+        firstStar.classList.add('bold');
+        secStar.classList.add('bold');
+        thirdStar.classList.add('bold');
+        fourthStar.classList.add('bold');
+
+        fivthStar.classList.remove('bold');
+
+        mainImage.classList.add('removeImage');
+        mainDiv.classList.add('mainDivGoesUp');
+
+        inputCont.classList.add('showInputCont');
+
+        ourText.innerHTML = 'You gave us 4 star';
+
+ourTextPara.classList.add('paraShow')
+
+
+
+    });
+
+
+
+    fivthStar.addEventListener('click', () =>{
+        firstStar.classList.add('bold');
+        secStar.classList.add('bold');
+        thirdStar.classList.add('bold');
+        fourthStar.classList.add('bold');
+        fivthStar.classList.add('bold');
+
+        mainImage.classList.add('removeImage');
+        mainDiv.classList.add('mainDivGoesUp');
+
+        inputCont.classList.add('showInputCont');
+
+        ourText.innerHTML = 'You gave us 5 star';
+
+ourTextPara.classList.add('paraShow')
+
+    });
+
+
+
+    acutualFormSubmit.addEventListener('submit', (e) =>{
+        e.preventDefault();
+        starsCont.classList.add('removeStarsCont');
+        ourText.innerHTML = 'Thank You So Much For Giving Feeback';
+
+
+        mainImage.classList.remove('removeImage');
+        inputForm.classList.add('removeInput');
+        mainLastText.classList.add('textGoesDown');
+
+        document.querySelector('.submit').style.display = 'none';
+        document.querySelector('.googlePlay').style.display = 'flex';
+
+
+
+    })
+
+
+
+
+</script>
